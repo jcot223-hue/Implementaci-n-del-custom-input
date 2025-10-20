@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'screens/login_screen.dart';
 import 'screens/register_screen.dart';
+import 'screens/main_screen.dart';
+import 'screens/gps_screen.dart'; 
 
 void main() {
   runApp(const MyApp());
@@ -22,6 +24,8 @@ class MyApp extends StatelessWidget {
       routes: {
         '/': (context) => const LoginScreen(),
         '/registro': (context) => const RegisterScreen(),
+        '/main': (context) => const MainScreen(),
+        '/nueva': (context) => const GPSScreen(),
       },
     );
   }

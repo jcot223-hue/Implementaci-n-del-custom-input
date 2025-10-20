@@ -36,7 +36,6 @@ class LoginScreen extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 16),
-
               Align(
                 alignment: Alignment.center,
                 child: SizedBox(
@@ -44,13 +43,38 @@ class LoginScreen extends StatelessWidget {
                   child: CustomButton(
                     texto: "Iniciar Sesión",
                     onPressed: () {
+                      String email = emailController.text.trim();
+                      String password = passwordController.text.trim();
+
+                      if (email.isEmpty || password.isEmpty) {
+                        ScaffoldMessenger.of(context).showSnackBar(
+                          const SnackBar(
+                            content: Text('Por favor, ingresa correo y contraseña'),
+                          ),
+                        );
+                        return;
+                      }
+
+                      // Aquí podrías agregar validación real con backend o base de datos
+                      Navigator.pushNamed(context, '/main');
                     },
                   ),
                 ),
               ),
-
+              const SizedBox(height: 16),
+              Align(
+                alignment: Alignment.center,
+                child: SizedBox(
+                  width: width * 0.6,
+                  child: CustomButton(
+                    texto: "Ir a pantalla de GPS",
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/nueva'); // redirige al GPSScreen
+                    },
+                  ),
+                ),
+              ),
               const SizedBox(height: 8),
-
               Align(
                 alignment: Alignment.center,
                 child: SizedBox(

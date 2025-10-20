@@ -78,21 +78,17 @@ class RegisterScreen extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 16),
-
               Align(
                 alignment: Alignment.center,
                 child: SizedBox(
                   width: width * 0.33,
                   child: CustomButton(
                     texto: "Registrarse",
-                    onPressed: () {
-                    },
+                    onPressed: () {},
                   ),
                 ),
               ),
-
               const SizedBox(height: 8),
-
               Align(
                 alignment: Alignment.center,
                 child: SizedBox(
