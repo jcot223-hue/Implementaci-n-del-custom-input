@@ -55,7 +55,6 @@ class LoginScreen extends StatelessWidget {
                         return;
                       }
 
-                      // Aquí podrías agregar validación real con backend o base de datos
                       Navigator.pushNamed(context, '/main');
                     },
                   ),
@@ -67,9 +66,9 @@ class LoginScreen extends StatelessWidget {
                 child: SizedBox(
                   width: width * 0.6,
                   child: CustomButton(
-                    texto: "Ir a pantalla de GPS",
+                    texto: "Obtener GPS",
                     onPressed: () {
-                      Navigator.pushNamed(context, '/nueva'); // redirige al GPSScreen
+                      Navigator.pushNamed(context, '/nueva');
                     },
                   ),
                 ),
